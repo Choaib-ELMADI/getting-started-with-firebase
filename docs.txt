@@ -9,3 +9,10 @@
     googleAuthProvider() ==> authentication with your google account // creating new instance.
     signInWithPopup() ==> popup to sing in.
     signOut() ==> sign out currentUser.
+
+4) Firestore:
+    getFirestore() ==> a function that tells firebase that it's gonna have access to the firestore service.
+
+    getDocs() ==> get all the documents inside firebase.
+    getDoc() ==> get only one document.
+    collection() ==> a reference to a specific collection.

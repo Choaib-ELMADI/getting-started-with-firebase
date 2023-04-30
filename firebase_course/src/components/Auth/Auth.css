@@ -1,7 +1,7 @@
 .app__auth {
     display: grid;
     place-items: center;
-    height: 100vh;
+    padding: 10rem 0;
     width: 100%;
     max-width: 400px;
     margin: 0 auto;
