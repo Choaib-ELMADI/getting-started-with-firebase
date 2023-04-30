@@ -1,0 +1,1 @@
+1) Register your application on firebase & install firebase
