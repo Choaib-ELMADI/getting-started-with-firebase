@@ -1,2 +1,6 @@
 1) Register your application on firebase & install firebase
 2) Install firebase CLI for web hosting
+
+3) Authentication:
+    getAuth() ==> a function that sets up authentication inside your app.
+    createUserWithEmailAndPassword() ==>  authentication with email and password.

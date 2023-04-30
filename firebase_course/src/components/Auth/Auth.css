@@ -1,0 +1,37 @@
+.app__auth {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.app__auth form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.app__auth form input {
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #333333;
+    padding: .5rem .75rem;
+    border-radius: 8px;
+    font-size: 18px;
+}
+
+.app__auth form button {
+    margin-right: auto;
+    border: 0;
+    outline: none;
+    padding: .5rem .75rem;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+}
