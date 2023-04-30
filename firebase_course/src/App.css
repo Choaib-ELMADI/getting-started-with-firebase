@@ -1,3 +1,87 @@
 .app {
-    padding: 0 2rem;
+    padding: 0 2rem 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.app .app__add-movie {
+    padding: 0 0 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.app .app__add-movie input {
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #333333;
+    padding: .5rem .75rem;
+    border-radius: 8px;
+    font-size: 18px;
+}
+
+.app .app__add-movie span {
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+}
+
+.app .app__add-movie span label {
+    font-size: 18px;
+}
+
+.app .app__add-movie input[type = "checkbox"] {
+    margin-right: auto;
+    width: 24px;
+    height: 24px;
+}
+
+.app .app__add-movie button {
+    border: 0;
+    outline: none;
+    padding: .5rem .75rem;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.app .app__add-movie button:disabled {
+    background: #161616;
+    color: rgba(255, 0, 0, .45);
+    cursor: not-allowed;
+}
+
+.app .app__movies-list {
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.app .app__movies-list div {
+    background: #333333;
+    padding: 2rem 1rem .5rem;
+    border-radius: 12px;
+    position: relative;
+}
+
+.app .app__movies-list div button {
+    position: absolute;
+    top: .5rem;
+    right: .5rem;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    border-radius: 50%;
+    border: 0;
+    outline: none;
+    cursor: pointer;
 }

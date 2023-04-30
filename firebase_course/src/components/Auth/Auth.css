@@ -1,7 +1,7 @@
 .app__auth {
     display: grid;
     place-items: center;
-    padding: 10rem 0;
+    padding: 5rem 0;
     width: 100%;
     max-width: 400px;
     margin: 0 auto;
@@ -27,9 +27,10 @@
 }
 
 .app__auth form .buttons-container {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: max-content auto max-content;
+    grid-gap: 1rem;
 }
 
 .app__auth form .buttons-container button {
@@ -44,5 +45,6 @@
 .app__auth form .buttons-container button:nth-child(2) {
     display: flex;
     align-items: center;
-    gap: .25rem;
+    justify-content: center;
+    gap: .5rem;
 }

@@ -1,6 +1,7 @@
 1) Register your application on firebase & install firebase.
 2) Install firebase CLI for web hosting.
 
+
 3) Authentication:
     getAuth() ==> a function that sets up authentication inside your app.
 
@@ -10,9 +11,15 @@
     signInWithPopup() ==> popup to sing in.
     signOut() ==> sign out currentUser.
 
+
 4) Firestore:
     getFirestore() ==> a function that tells firebase that it's gonna have access to the firestore service.
 
     getDocs() ==> get all the documents inside firebase.
     getDoc() ==> get only one document.
     collection() ==> a reference to a specific collection.
+
+    addDoc() ==> add a document to the firestore data.
+
+    deleteDoc() ==> delete a specific document.
+    doc() ==> create a reference to the document to delete.
