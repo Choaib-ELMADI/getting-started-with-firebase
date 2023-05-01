@@ -47,6 +47,7 @@ const Movie = ({ movie, key, getMovieList }) => {
         try {
           await updateDoc(movieDoc, { title: updatedTitle });
           getMovieList();
+          setUpdatedTitle('');
         }
         catch(err) {
           console.error(err);
@@ -63,6 +64,7 @@ const Movie = ({ movie, key, getMovieList }) => {
                 type="text"
                 placeholder='Update title'
                 onChange={ (e) => setUpdatedTitle(e.target.value) }
+                value={ updatedTitle }
             />
             <button 
                 onClick={ () => handleUpdateTitle(movie.id) }
