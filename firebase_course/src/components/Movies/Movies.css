@@ -1,0 +1,57 @@
+.app__movies-list {
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.app__movies-list div {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    background: #444444;
+    padding: 2rem .75rem .75rem;
+    border-radius: 12px;
+    position: relative;
+}
+
+.app__movies-list div button.delete {
+    position: absolute;
+    top: .5rem;
+    right: .5rem;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    border-radius: 50%;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+
+.app__movies-list div button:not(button.delete) {
+    border: 0;
+    outline: none;
+    padding: .5rem .75rem;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.app__movies-list div input {
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #333333;
+    padding: .5rem .75rem;
+    border-radius: 8px;
+    font-size: 18px;
+}
+
+.app__movies-list button:disabled {
+    background: #161616;
+    color: rgba(255, 0, 0, .45);
+    cursor: not-allowed !important;
+}
