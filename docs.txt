@@ -13,6 +13,7 @@
 
 
 4) Firestore:
+    //CRUD:
     getFirestore() ==> a function that tells firebase that it's gonna have access to the firestore service.
 
     getDocs() ==> get all the documents inside firebase.
@@ -25,3 +26,9 @@
     doc() ==> create a reference to the document to delete.
 
     updateDoc() ==> update specific info in a specific document.
+
+    //STORAGE:
+    getStorage() ==> a function that tells firebase that we want to store some data.
+
+    ref() ==> create a reference to the place where to store uploaded data.
+    uploadBytes() ==> upload data.
