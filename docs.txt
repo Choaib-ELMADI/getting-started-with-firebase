@@ -23,3 +23,5 @@
 
     deleteDoc() ==> delete a specific document.
     doc() ==> create a reference to the document to delete.
+
+    updateDoc() ==> update specific info in a specific document.

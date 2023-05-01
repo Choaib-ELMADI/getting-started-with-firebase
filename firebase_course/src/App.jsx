@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 import { Auth } from './components/index';
 import { db } from './config/firebase';
-import { getDocs, collection, addDoc, deleteDoc, doc } from 'firebase/firestore';
+import { getDocs, collection, addDoc, deleteDoc, doc, updateDoc } from 'firebase/firestore';
 import './App.css';
 
 
@@ -13,6 +13,8 @@ const App = () => {
   const [title, setTitle] = useState('');
   const [releaseDate, setReleaseDate] = useState(0);
   const [hasOscar, setHasOscar] = useState(false);
+
+  const [updatedTitle, setUpdatedTitle] = useState('');
 
   const movieListRef = collection(db, "movies");
   const getMovieList = async () => {
@@ -48,6 +50,17 @@ const App = () => {
     const movieDoc = doc(db, "movies", id)
     try {
       await deleteDoc(movieDoc);
+      getMovieList();
+    }
+    catch(err) {
+      console.error(err);
+    }
+  };
+
+  const handleUpdateTitle = async (id) => {
+    const movieDoc = doc(db, "movies", id);
+    try {
+      await updateDoc(movieDoc, { title: updatedTitle });
       getMovieList();
     }
     catch(err) {
@@ -96,7 +109,14 @@ const App = () => {
             <div key={ movie.id }>
               <h2 style={{ color: movie.hasOscar ? 'greenyellow' : 'red' }}>{ movie.title }</h2>
               <p>Date: <b>{ movie.releaseDate }</b></p>
-              <button onClick={ () => handleDeleteMovie(movie.id) }>X</button>
+              <button className='delete' onClick={ () => handleDeleteMovie(movie.id) }>X</button>
+
+              <input 
+                type="text"
+                placeholder='Update title'
+                onChange={ (e) => setUpdatedTitle(e.target.value) }
+              />
+              <button onClick={ () => handleUpdateTitle(movie.id) }>Update Title</button>
             </div>
           ))
         }

@@ -15,7 +15,8 @@
     margin: 0 auto;
 }
 
-.app .app__add-movie input {
+.app .app__add-movie input,
+.app .app__movies-list div input {
     width: 100%;
     border: 0;
     outline: none;
@@ -41,7 +42,8 @@
     height: 24px;
 }
 
-.app .app__add-movie button {
+.app .app__add-movie button,
+.app .app__movies-list div button:not(button.delete) {
     border: 0;
     outline: none;
     padding: .5rem .75rem;
@@ -67,13 +69,16 @@
 }
 
 .app .app__movies-list div {
-    background: #333333;
-    padding: 2rem 1rem .5rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    background: #444444;
+    padding: 2rem .75rem .75rem;
     border-radius: 12px;
     position: relative;
 }
 
-.app .app__movies-list div button {
+.app .app__movies-list div button.delete {
     position: absolute;
     top: .5rem;
     right: .5rem;
