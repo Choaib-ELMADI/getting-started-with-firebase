@@ -16,8 +16,8 @@ const Movies = ({ movieList, getMovieList }) => {
             :
             movieList.map(movie => (
                 <Movie 
-                    movie={ movie } 
-                    key={ movie.id } 
+                    movie={ movie }
+                    key={ movie.id }
                     getMovieList={ getMovieList }
                 />
             ))
@@ -28,7 +28,7 @@ const Movies = ({ movieList, getMovieList }) => {
 
 export default Movies;
 
-const Movie = ({ movie, key, getMovieList }) => {
+const Movie = ({ movie, getMovieList }) => {
     const [updatedTitle, setUpdatedTitle] = useState('');
 
     const handleDeleteMovie = async (id) => {
@@ -55,7 +55,7 @@ const Movie = ({ movie, key, getMovieList }) => {
     };
 
     return (
-        <div key={ key }>
+        <div>
             <h2 style={{ color: movie.hasOscar ? 'greenyellow' : 'red' }}>{ movie.title }</h2>
             <p>Date: <b>{ movie.releaseDate }</b></p>
             <button className='delete' onClick={ () => handleDeleteMovie(movie.id) }>X</button>

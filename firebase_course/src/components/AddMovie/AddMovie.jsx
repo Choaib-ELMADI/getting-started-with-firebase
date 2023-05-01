@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
 import { addDoc } from 'firebase/firestore';
+import { auth } from '../../config/firebase';
 
 import './AddMovie.css';
 
@@ -13,7 +14,7 @@ const AddMovie = ({ getMovieList, movieListRef }) => {
 
     const handleAddMovie = async () => {
         try {
-            await addDoc(movieListRef, { title, releaseDate, hasOscar });
+            await addDoc(movieListRef, { title, releaseDate, hasOscar, userId: auth?.currentUser?.uid });
             getMovieList();
             setTitle("");
             setReleaseDate(0);
